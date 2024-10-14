@@ -1,768 +1,1366 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <title>Hounter</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20241014094100" />
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-<head>
-	<title>Hounter</title>
-	<meta charset="UTF-8" />
-	<meta name="format-detection" content="telephone=no" />
-	<link rel="stylesheet" href="css/style.min.css?_v=20241014094100" />
-	<link rel="shortcut icon" href="favicon.png" type="image/png" />
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__logo logo">
+            <a href="#" class="logo__body">
+              <img src="img/logo.svg" alt="logo" />
+              <p class="logo__text">Hounter</p>
+            </a>
+          </div>
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" data-goto=".reviews" class="menu__link"
+                    >About Us</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <a href="#" data-goto=".artikel" class="menu__link"
+                    >Article</a
+                  >
+                </li>
+                <li class="menu__item">
+                  <div data-spollers class="menu__spollers spollers-menu">
+                    <div class="spollers-menu__item menu__list">
+                      <button
+                        type="button"
+                        data-spoller
+                        data-spoller-close
+                        class="spollers-menu__title menu__link _icon-arrow"
+                      >
+                        Property
+                      </button>
+                      <div class="spollers-menu__body">
+                        <ul class="spollers-menu__items">
+                          <li class="spollers-menu__item">
+                            <a
+                              href="#"
+                              data-goto=".featuredHouse"
+                              class="spollers-menu__link"
+                              id="house-link"
+                              >House</a
+                            >
+                          </li>
+                          <li class="spollers-menu__item">
+                            <a
+                              href="#"
+                              data-goto=".featuredHouse"
+                              class="spollers-menu__link"
+                              id="apartment-link"
+                              >Apartment</a
+                            >
+                          </li>
+                          <li class="spollers-menu__item">
+                            <a
+                              href="#"
+                              data-goto=".featuredHouse"
+                              class="spollers-menu__link"
+                              id="villa-link"
+                              >Villa</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
-<body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<div class="header__logo logo">
-					<a href="#" class="logo__body">
-						<img src="img/logo.svg" alt="logo" />
-						<p class="logo__text">Hounter</p>
-					</a>
-				</div>
-				<div class="header__menu menu">
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item">
-								<a href="#" data-goto=".reviews" class="menu__link">About Us</a>
-							</li>
-							<li class="menu__item">
-								<a href="#" data-goto=".artikel" class="menu__link">Article</a>
-							</li>
-							<li class="menu__item">
-								<div data-spollers class="menu__spollers spollers-menu">
-									<div class="spollers-menu__item menu__list">
-										<button type="button" data-spoller data-spoller-close class="spollers-menu__title menu__link _icon-arrow">
-											Property
-										</button>
-										<div class="spollers-menu__body">
-											<ul class="spollers-menu__items">
-												<li class="spollers-menu__item">
-													<a href="#" data-goto=".featuredHouse" class="spollers-menu__link" id="house-link">House</a>
-												</li>
-												<li class="spollers-menu__item">
-													<a href="#" data-goto=".featuredHouse" class="spollers-menu__link" id="apartment-link">Apartment</a>
-												</li>
-												<li class="spollers-menu__item">
-													<a href="#" data-goto=".featuredHouse" class="spollers-menu__link" id="villa-link">Villa</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</nav>
-				</div>
+          <a href="#" class="header__signUp">Sign Up!</a>
+        </div>
+      </header>
 
-				<a href="#" class="header__signUp">Sign Up!</a>
-			</div>
-		</header>
+      <main class="page">
+        <section class="preview">
+          <div class="preview__container">
+            <div class="preview__content">
+              <div class="preview__label label-preview">
+                <h1 class="label-preview__title">
+                  find the place to <br />
+                  live <span>your dreams</span>
+                  <br />
+                  easily here
+                </h1>
+                <p class="label-preview__subtitle">
+                  Everything you need about finding your place to live will be
+                  here, <br />
+                  where it will be easier for you
+                </p>
+              </div>
+              <form data-dev action="#" class="preview__form _icon-location">
+                <input
+                  autocomplete="off"
+                  type="text"
+                  name="form[]"
+                  data-error="Ошибка"
+                  placeholder="Search for the location you want!"
+                  class="preview__input input"
+                />
+                <button
+                  type="submit"
+                  class="preview__button button _icon-arrow"
+                ></button>
+              </form>
+              <div class="preview__partnership partnership-preview">
+                <p class="partnership-preview__text">Our Partnership</p>
+                <div class="partnership-preview__items">
+                  <a
+                    href="https://www.traveloka.com/en-en"
+                    target="_blank"
+                    class="partnership-preview__item"
+                    ><picture
+                      ><source
+                        srcset="img/preview/partnership/traveloka_logo.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/preview/partnership/traveloka_logo.png"
+                        alt="tripadvisor" /></picture
+                  ></a>
+                  <a
+                    href="https://en.tiket.com/"
+                    target="_blank"
+                    class="partnership-preview__item"
+                    ><picture
+                      ><source
+                        srcset="img/preview/partnership/tiket_logo.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/preview/partnership/tiket_logo.png"
+                        alt="tripadvisor" /></picture
+                  ></a>
+                  <a
+                    href="https://www.airbnb.ru/"
+                    target="_blank"
+                    class="partnership-preview__item"
+                    ><picture
+                      ><source
+                        srcset="img/preview/partnership/aribnb_logo.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/preview/partnership/aribnb_logo.png"
+                        alt="aribnb" /></picture
+                  ></a>
+                  <a
+                    href="https://www.tripadvisor.ru/"
+                    target="_blank"
+                    class="partnership-preview__item"
+                    ><picture
+                      ><source
+                        srcset="img/preview/partnership/tripadvisor_logo.webp"
+                        type="image/webp" />
+                      <img
+                        src="img/preview/partnership/tripadvisor_logo.png"
+                        alt="tripadvisor" /></picture
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="preview__image image-preview">
+              <div class="image-preview__slider swiper">
+                <div class="image-preview__wrapper swiper-wrapper">
+                  <div class="image-preview__slide swiper-slide">
+                    <picture
+                      ><source
+                        srcset="img/preview/image-preview/people.webp"
+                        type="image/webp" />
+                      <img
+                        class="swiper-slide__img"
+                        src="img/preview/image-preview/people.png"
+                        alt="people"
+                    /></picture>
+                    <div class="swiper-slide__body">
+                      <div class="swiper-slide__title">1K+ People</div>
+                      <div class="swiper-slide__text">
+                        Successfully Getting Home
+                      </div>
+                    </div>
+                  </div>
+                  <div class="image-preview__slide swiper-slide">
+                    <picture
+                      ><source
+                        srcset="img/preview/image-preview/houses.webp"
+                        type="image/webp" />
+                      <img
+                        class="swiper-slide__img"
+                        src="img/preview/image-preview/houses.png"
+                        alt="people"
+                    /></picture>
+                    <div class="swiper-slide__body">
+                      <div class="swiper-slide__title">56 Houses</div>
+                      <div class="swiper-slide__text">Sold Monthly</div>
+                    </div>
+                  </div>
+                  <div class="image-preview__slide swiper-slide">
+                    <picture
+                      ><source
+                        srcset="img/preview/image-preview/4K.webp"
+                        type="image/webp" />
+                      <img
+                        class="swiper-slide__img"
+                        src="img/preview/image-preview/4K.png"
+                        alt="people"
+                    /></picture>
+                    <div class="swiper-slide__body">
+                      <div class="swiper-slide__title">4K+</div>
+                      <div class="swiper-slide__text">
+                        People Looking for New Homes
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-watch="navigator" class="featuredHouse">
+          <div class="featuredHouse__container">
+            <div class="featuredHouse__head head-featuredHouse">
+              <div class="head-featuredHouse__label label">
+                <p class="label__subtitle">Our Recommendation</p>
+                <h2 class="label__title">Featured House</h2>
+              </div>
+              <div class="head-featuredHouse__buttons">
+                <button
+                  class="head-featuredHouse__button head-featuredHouse__button_current _icon-house"
+                  id="house"
+                >
+                  House
+                </button>
+                <button
+                  class="head-featuredHouse__button _icon-villa"
+                  id="villa"
+                >
+                  Villa
+                </button>
+                <button
+                  class="head-featuredHouse__button _icon-apartment"
+                  id="apartment"
+                >
+                  Apartment
+                </button>
+              </div>
+              <div
+                class="head-featuredHouse__navigation head-featuredHouse__navigation_current"
+              >
+                <button
+                  type="button"
+                  class="head-featuredHouse__button-next house-slider__button-next _icon-arrow"
+                ></button>
+                <button
+                  type="button"
+                  class="head-featuredHouse__button-prev house-slider__button-prev _icon-arrow"
+                ></button>
+              </div>
+              <div class="head-featuredHouse__navigation">
+                <button
+                  type="button"
+                  class="head-featuredHouse__button-next villa-slider__button-next _icon-arrow"
+                ></button>
+                <button
+                  type="button"
+                  class="head-featuredHouse__button-prev villa-slider__button-prev _icon-arrow"
+                ></button>
+              </div>
+              <div class="head-featuredHouse__navigation">
+                <button
+                  type="button"
+                  class="head-featuredHouse__button-next apartment-slider__button-next _icon-arrow"
+                ></button>
+                <button
+                  type="button"
+                  class="head-featuredHouse__button-prev apartment-slider__button-prev _icon-arrow"
+                ></button>
+              </div>
+            </div>
+            <div class="featuredHouse__body body-featuredHouse">
+              <div
+                class="body-featuredHouse__slider body-featuredHouse__slider_current house-slider swiper"
+              >
+                <div class="body-featuredHouse__wrapper swiper-wrapper">
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_1.webp"
+                          type="image/webp" />
+                        <img
+                          class="autor__image"
+                          src="img/featuredHouse/slide_1.png"
+                          alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular"
+                      >
+                        Popular
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Roselands House</h3>
+                        <p class="body-house__price">$ 35.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_1.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_1.png"
+                            alt="avatar"
+                        /></picture>
 
-		<main class="page">
-			<section class="preview">
-				<div class="preview__container">
-					<div class="preview__content">
-						<div class="preview__label label-preview">
-							<h1 class="label-preview__title">
-								find the place to <br />
-								live <span>your dreams</span>
-								<br />
-								easily here
-							</h1>
-							<p class="label-preview__subtitle">
-								Everything you need about finding your place to live will be
-								here, <br />
-								where it will be easier for you
-							</p>
-						</div>
-						<form data-dev action="#" class="preview__form _icon-location">
-							<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Search for the location you want!" class="preview__input input" />
-							<button type="submit" class="preview__button button _icon-arrow"></button>
-						</form>
-						<div class="preview__partnership partnership-preview">
-							<p class="partnership-preview__text">Our Partnership</p>
-							<div class="partnership-preview__items">
-								<a href="https://www.traveloka.com/en-en" target="_blank" class="partnership-preview__item"><picture><source srcset="img/preview/partnership/traveloka_logo.webp" type="image/webp"><img src="img/preview/partnership/traveloka_logo.png" alt="tripadvisor" /></picture></a>
-								<a href="https://en.tiket.com/" target="_blank" class="partnership-preview__item"><picture><source srcset="img/preview/partnership/tiket_logo.webp" type="image/webp"><img src="img/preview/partnership/tiket_logo.png" alt="tripadvisor" /></picture></a>
-								<a href="https://www.airbnb.ru/" target="_blank" class="partnership-preview__item"><picture><source srcset="img/preview/partnership/aribnb_logo.webp" type="image/webp"><img src="img/preview/partnership/aribnb_logo.png" alt="aribnb" /></picture></a>
-								<a href="https://www.tripadvisor.ru/" target="_blank" class="partnership-preview__item"><picture><source srcset="img/preview/partnership/tripadvisor_logo.webp" type="image/webp"><img src="img/preview/partnership/tripadvisor_logo.png" alt="tripadvisor" /></picture></a>
-							</div>
-						</div>
-					</div>
-					<div class="preview__image image-preview">
-						<div class="image-preview__slider swiper">
-							<div class="image-preview__wrapper swiper-wrapper">
-								<div class="image-preview__slide swiper-slide">
-									<picture><source srcset="img/preview/image-preview/people.webp" type="image/webp"><img class="swiper-slide__img" src="img/preview/image-preview/people.png" alt="people" /></picture>
-									<div class="swiper-slide__body">
-										<div class="swiper-slide__title">1K+ People</div>
-										<div class="swiper-slide__text">
-											Successfully Getting Home
-										</div>
-									</div>
-								</div>
-								<div class="image-preview__slide swiper-slide">
-									<picture><source srcset="img/preview/image-preview/houses.webp" type="image/webp"><img class="swiper-slide__img" src="img/preview/image-preview/houses.png" alt="people" /></picture>
-									<div class="swiper-slide__body">
-										<div class="swiper-slide__title">56 Houses</div>
-										<div class="swiper-slide__text">Sold Monthly</div>
-									</div>
-								</div>
-								<div class="image-preview__slide swiper-slide">
-									<picture><source srcset="img/preview/image-preview/4K.webp" type="image/webp"><img class="swiper-slide__img" src="img/preview/image-preview/4K.png" alt="people" /></picture>
-									<div class="swiper-slide__body">
-										<div class="swiper-slide__title">4K+</div>
-										<div class="swiper-slide__text">
-											People Looking for New Homes
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch="navigator" class="featuredHouse">
-				<div class="featuredHouse__container">
-					<div class="featuredHouse__head head-featuredHouse">
-						<div class="head-featuredHouse__label label">
-							<p class="label__subtitle">Our Recommendation</p>
-							<h2 class="label__title">Featured House</h2>
-						</div>
-						<div class="head-featuredHouse__buttons">
-							<button class="head-featuredHouse__button head-featuredHouse__button_current _icon-house" id="house">
-								House
-							</button>
-							<button class="head-featuredHouse__button _icon-villa" id="villa">
-								Villa
-							</button>
-							<button class="head-featuredHouse__button _icon-apartment" id="apartment">
-								Apartment
-						</div>
-						<div class="head-featuredHouse__navigation head-featuredHouse__navigation_current">
-							<button type="button" class="head-featuredHouse__button-next house-slider__button-next _icon-arrow"></button>
-							<button type="button" class="head-featuredHouse__button-prev house-slider__button-prev _icon-arrow"></button>
-						</div>
-						<div class="head-featuredHouse__navigation ">
-							<button type="button" class="head-featuredHouse__button-next villa-slider__button-next _icon-arrow"></button>
-							<button type="button" class="head-featuredHouse__button-prev villa-slider__button-prev _icon-arrow"></button>
-						</div>
-						<div class="head-featuredHouse__navigation">
-							<button type="button" class="head-featuredHouse__button-next apartment-slider__button-next _icon-arrow"></button>
-							<button type="button" class="head-featuredHouse__button-prev apartment-slider__button-prev _icon-arrow"></button>
-						</div>
-					</div>
-					<div class="featuredHouse__body body-featuredHouse">
-						<div class="body-featuredHouse__slider body-featuredHouse__slider_current house-slider swiper">
-							<div class="body-featuredHouse__wrapper swiper-wrapper">
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_1.webp" type="image/webp"><img class="autor__image" src="img/featuredHouse/slide_1.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular">
-											Popular
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Roselands House</h3>
-											<p class="body-house__price">$ 35.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_1.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_1.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Dianne Russell</div>
+                          <div class="autor__address">Manchester, Kentucky</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_2.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_2.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_house _icon-house"
+                      >
+                        New house
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Woodlandside</h3>
+                        <p class="body-house__price">$ 20.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_2.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_2.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Dianne Russell</div>
-												<div class="autor__address">Manchester, Kentucky</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_2.webp" type="image/webp"><img src="img/featuredHouse/slide_2.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_house _icon-house">
-											New house
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Woodlandside</h3>
-											<p class="body-house__price">$ 20.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_2.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_2.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Robert Fox</div>
+                          <div class="autor__address">
+                            Dr. San Jose, South Dakota
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_3.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_3.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_best-deals _icon-best-deals"
+                      >
+                        Best Deals
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">The Old Lighthouse</h3>
+                        <p class="body-house__price">$ 44.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_3.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_3.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Robert Fox</div>
-												<div class="autor__address">
-													Dr. San Jose, South Dakota
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_3.webp" type="image/webp"><img src="img/featuredHouse/slide_3.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_best-deals _icon-best-deals">
-											Best Deals
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">The Old Lighthouse</h3>
-											<p class="body-house__price">$ 44.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_3.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_3.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Ronald Richards</div>
+                          <div class="autor__address">Santa Ana, Illinois</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_4.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_4.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular"
+                      >
+                        Popular
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Cosmo's House</h3>
+                        <p class="body-house__price">$ 22.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_4.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_4.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Ronald Richards</div>
-												<div class="autor__address">Santa Ana, Illinois</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_4.webp" type="image/webp"><img src="img/featuredHouse/slide_4.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular">
-											Popular
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Cosmo's House</h3>
-											<p class="body-house__price">$ 22.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_4.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_4.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Jenny Wilson</div>
+                          <div class="autor__address">
+                            Preston Rd. Inglewood, Maine 98380
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="body-featuredHouse__slider villa-slider swiper">
+                <div class="body-featuredHouse__wrapper swiper-wrapper">
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_2.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_2.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular"
+                      >
+                        Popular
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Roselands House</h3>
+                        <p class="body-house__price">$ 35.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_2.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_2.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Jenny Wilson</div>
-												<div class="autor__address">
-													Preston Rd. Inglewood, Maine 98380
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="body-featuredHouse__slider villa-slider swiper">
-							<div class="body-featuredHouse__wrapper swiper-wrapper">
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_2.webp" type="image/webp"><img src="img/featuredHouse/slide_2.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular">
-											Popular
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Roselands House</h3>
-											<p class="body-house__price">$ 35.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_2.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_2.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Dianne Russell</div>
+                          <div class="autor__address">Manchester, Kentucky</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_1.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_1.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_house _icon-house"
+                      >
+                        New house
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Woodlandside</h3>
+                        <p class="body-house__price">$ 20.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_1.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_1.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Dianne Russell</div>
-												<div class="autor__address">Manchester, Kentucky</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_1.webp" type="image/webp"><img src="img/featuredHouse/slide_1.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_house _icon-house">
-											New house
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Woodlandside</h3>
-											<p class="body-house__price">$ 20.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_1.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_1.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Robert Fox</div>
+                          <div class="autor__address">
+                            Dr. San Jose, South Dakota
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_3.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_3.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_best-deals _icon-best-deals"
+                      >
+                        Best Deals
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">The Old Lighthouse</h3>
+                        <p class="body-house__price">$ 44.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_3.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_3.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Robert Fox</div>
-												<div class="autor__address">
-													Dr. San Jose, South Dakota
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_3.webp" type="image/webp"><img src="img/featuredHouse/slide_3.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_best-deals _icon-best-deals">
-											Best Deals
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">The Old Lighthouse</h3>
-											<p class="body-house__price">$ 44.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_3.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_3.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Ronald Richards</div>
+                          <div class="autor__address">Santa Ana, Illinois</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_4.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_4.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular"
+                      >
+                        Popular
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Cosmo's House</h3>
+                        <p class="body-house__price">$ 22.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_4.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_4.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Ronald Richards</div>
-												<div class="autor__address">Santa Ana, Illinois</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_4.webp" type="image/webp"><img src="img/featuredHouse/slide_4.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular">
-											Popular
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Cosmo's House</h3>
-											<p class="body-house__price">$ 22.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_4.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_4.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Jenny Wilson</div>
+                          <div class="autor__address">
+                            Preston Rd. Inglewood, Maine 98380
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="body-featuredHouse__slider apartment-slider swiper">
+                <div class="body-featuredHouse__wrapper swiper-wrapper">
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_1.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_1.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular"
+                      >
+                        Popular
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Roselands House</h3>
+                        <p class="body-house__price">$ 35.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_3.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_3.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Jenny Wilson</div>
-												<div class="autor__address">
-													Preston Rd. Inglewood, Maine 98380
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="body-featuredHouse__slider apartment-slider swiper">
-							<div class="body-featuredHouse__wrapper swiper-wrapper">
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_1.webp" type="image/webp"><img src="img/featuredHouse/slide_1.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular">
-											Popular
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Roselands House</h3>
-											<p class="body-house__price">$ 35.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_3.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_3.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Dianne Russell</div>
+                          <div class="autor__address">Manchester, Kentucky</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_3.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_3.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_house _icon-house"
+                      >
+                        New house
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Woodlandside</h3>
+                        <p class="body-house__price">$ 20.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_2.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_2.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Dianne Russell</div>
-												<div class="autor__address">Manchester, Kentucky</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_3.webp" type="image/webp"><img src="img/featuredHouse/slide_3.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_house _icon-house">
-											New house
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Woodlandside</h3>
-											<p class="body-house__price">$ 20.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_2.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_2.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Robert Fox</div>
+                          <div class="autor__address">
+                            Dr. San Jose, South Dakota
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_1.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_1.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_best-deals _icon-best-deals"
+                      >
+                        Best Deals
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">The Old Lighthouse</h3>
+                        <p class="body-house__price">$ 44.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_1.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_1.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Robert Fox</div>
-												<div class="autor__address">
-													Dr. San Jose, South Dakota
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_1.webp" type="image/webp"><img src="img/featuredHouse/slide_1.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_best-deals _icon-best-deals">
-											Best Deals
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">The Old Lighthouse</h3>
-											<p class="body-house__price">$ 44.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_1.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_1.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Ronald Richards</div>
+                          <div class="autor__address">Santa Ana, Illinois</div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <a href="#" class="body-featuredHouse__slide swiper-slide">
+                    <div class="body-featuredHouse__image">
+                      <picture
+                        ><source
+                          srcset="img/featuredHouse/slide_4.webp"
+                          type="image/webp" />
+                        <img src="img/featuredHouse/slide_4.png" alt="slide_1"
+                      /></picture>
+                      <div
+                        class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular"
+                      >
+                        Popular
+                      </div>
+                    </div>
+                    <div class="body-featuredHouse__body body-house">
+                      <div class="body-house__label">
+                        <h3 class="body-house__title">Cosmo's House</h3>
+                        <p class="body-house__price">$ 22.000.000</p>
+                      </div>
+                      <div class="body-house__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_4.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_4.png"
+                            alt="avatar"
+                        /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Ronald Richards</div>
-												<div class="autor__address">Santa Ana, Illinois</div>
-											</div>
-										</div>
-									</div>
-								</a>
-								<a href="#" class="body-featuredHouse__slide swiper-slide">
-									<div class="body-featuredHouse__image">
-										<picture><source srcset="img/featuredHouse/slide_4.webp" type="image/webp"><img src="img/featuredHouse/slide_4.png" alt="slide_1" /></picture>
-										<div class="body-featuredHouse__status body-featuredHouse__status_popular _icon-popular">
-											Popular
-										</div>
-									</div>
-									<div class="body-featuredHouse__body body-house">
-										<div class="body-house__label">
-											<h3 class="body-house__title">Cosmo's House</h3>
-											<p class="body-house__price">$ 22.000.000</p>
-										</div>
-										<div class="body-house__autor autor">
-											<picture><source srcset="img/avatar/avatar_4.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_4.png" alt="avatar" /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Jenny Wilson</div>
+                          <div class="autor__address">
+                            Preston Rd. Inglewood, Maine 98380
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="readySell">
+          <div class="readySell__container">
+            <div class="readySell__body body-readySell">
+              <div class="body-readySell__label label">
+                <p class="label__subtitle">Ready to Sell!</p>
+                <h2 class="label__title">Let’s tour and see our house!</h2>
+              </div>
+              <div class="body-readySell__content content-readySell">
+                <div class="content-readySell__text">
+                  Houses recommended by our partners that have been curated to
+                  become the home of your dreams!
+                </div>
+                <div
+                  class="content-readySell__houseDetail houseDetail-readySell"
+                >
+                  <p class="houseDetail-readySell__title">House Detail</p>
+                  <div class="houseDetail-readySell__items">
+                    <div class="houseDetail-readySell__item _icon-bedrooms">
+                      4 Bedrooms
+                    </div>
+                    <div class="houseDetail-readySell__item _icon-bathrooms">
+                      2 Bathrooms
+                    </div>
+                    <div class="houseDetail-readySell__item _icon-carport">
+                      1 Carport
+                    </div>
+                    <div class="houseDetail-readySell__item _icon-floors">
+                      2 Floors
+                    </div>
+                  </div>
+                </div>
+                <div class="content-readySell__contacts contacts-readySell">
+                  <div class="contacts-readySell__autor autor autor_big">
+                    <picture
+                      ><source
+                        srcset="img/avatar/avatar_1.webp"
+                        type="image/webp" />
+                      <img
+                        class="autor__image autor__image_big"
+                        src="img/avatar/avatar_1.png"
+                        alt="avatar"
+                    /></picture>
 
-											<div class="autor__info">
-												<div class="autor__name">Jenny Wilson</div>
-												<div class="autor__address">
-													Preston Rd. Inglewood, Maine 98380
-												</div>
-											</div>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="readySell">
-				<div class="readySell__container">
-					<div class="readySell__body body-readySell">
-						<div class="body-readySell__label label">
-							<p class="label__subtitle">Ready to Sell!</p>
-							<h2 class="label__title">Let’s tour and see our house!</h2>
-						</div>
-						<div class="body-readySell__content content-readySell">
-							<div class="content-readySell__text">Houses recommended by our partners that have been curated to become the home of your dreams!</div>
-							<div class="content-readySell__houseDetail houseDetail-readySell">
-								<p class="houseDetail-readySell__title">House Detail</p>
-								<div class="houseDetail-readySell__items">
-									<div class="houseDetail-readySell__item _icon-bedrooms">4 Bedrooms</div>
-									<div class="houseDetail-readySell__item _icon-bathrooms">2 Bathrooms</div>
-									<div class="houseDetail-readySell__item _icon-carport">1 Carport</div>
-									<div class="houseDetail-readySell__item _icon-floors">2 Floors</div>
-								</div>
-							</div>
-							<div class="content-readySell__contacts contacts-readySell">
-								<div class="contacts-readySell__autor autor autor_big">
-									<picture><source srcset="img/avatar/avatar_1.webp" type="image/webp"><img class="autor__image autor__image_big" src="img/avatar/avatar_1.png" alt="avatar" /></picture>
+                    <div class="autor__info autor__info autor__info_big">
+                      <div class="autor__name autor__name_big">
+                        Dianne Russell
+                      </div>
+                      <div class="autor__address autor__address_big">
+                        Manager Director
+                      </div>
+                    </div>
+                  </div>
+                  <a
+                    href="tel:+79234489285"
+                    class="contacts-readySell__button _icon-phone"
+                    >Contact Now
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="readySell__image image-readySell">
+              <div class="image-readySell__big" data-popup="#popup">
+                <picture
+                  ><source
+                    srcset="img/readySell/readySell_1.webp"
+                    type="image/webp" />
+                  <img src="img/readySell/readySell_1.png" alt="readySell"
+                /></picture>
+              </div>
+              <div class="image-readySell__bottom bottom-image">
+                <picture
+                  ><source
+                    srcset="img/readySell/readySell_2.webp"
+                    type="image/webp" />
+                  <img
+                    class="bottom-image__left"
+                    data-popup="#popup"
+                    src="img/readySell/readySell_2.png"
+                    alt="readySell"
+                /></picture>
+                <picture
+                  ><source
+                    srcset="img/readySell/readySell_3.webp"
+                    type="image/webp" />
+                  <img
+                    class="bottom-image__middle"
+                    data-popup="#popup"
+                    src="img/readySell/readySell_3.png"
+                    alt="readySell"
+                /></picture>
+                <picture
+                  ><source
+                    srcset="img/readySell/readySell_4.webp"
+                    type="image/webp" />
+                  <img
+                    class="bottom-image__right"
+                    data-popup="#popup"
+                    src="img/readySell/readySell_4.png"
+                    alt="readySell"
+                /></picture>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section data-watch="navigator" class="reviews">
+          <div class="reviews__container">
+            <div class="reviews__head head">
+              <p class="head__subtitle">See Our Review</p>
+              <h2 class="head__title">What Our User Say About Us</h2>
+            </div>
+            <div class="reviews__slider swiper">
+              <div class="reviews__wrapper swiper-wrapper">
+                <div class="reviews__slide reviews-slide swiper-slide">
+                  <picture
+                    ><source
+                      srcset="img/reviews/reviews_1.webp"
+                      type="image/webp" />
+                    <img
+                      class="reviews-slide__image"
+                      src="img/reviews/reviews_1.png"
+                      alt="reviews"
+                  /></picture>
+                  <div class="reviews-slide__content">
+                    <p class="reviews-slide__title">
+                      Best! I got the house I wanted through Hounter
+                    </p>
+                    <p class="reviews-slide__text">
+                      Through this website I can get a house with the type and
+                      specifications I want very easily, without a complicated
+                      process to be able to find information on the house we
+                      want.
+                    </p>
+                    <div class="reviews-slide__opinion">
+                      <div class="reviews-slide__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_1.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_1.png"
+                            alt="avatar"
+                        /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Dianne Russell</div>
+                          <div class="autor__address">Manager Director</div>
+                        </div>
+                      </div>
+                      <div class="reviews-slide__rating _icon-star">4.6</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slide reviews-slide swiper-slide">
+                  <picture
+                    ><source
+                      srcset="img/reviews/reviews_2.webp"
+                      type="image/webp" />
+                    <img
+                      class="reviews-slide__image"
+                      src="img/reviews/reviews_2.png"
+                      alt="reviews"
+                  /></picture>
+                  <div class="reviews-slide__content">
+                    <p class="reviews-slide__title">
+                      Through the Hounter, I can get a house for my self
+                    </p>
+                    <p class="reviews-slide__text">
+                      By looking for information about what kind of house we
+                      want, we managed to get the house we wanted very quickly,
+                      and directly connected with the seller to be able to ask
+                      about the details, very helpful!
+                    </p>
+                    <div class="reviews-slide__opinion">
+                      <div class="reviews-slide__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_5.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_5.png"
+                            alt="avatar"
+                        /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Esther Howard</div>
+                          <div class="autor__address">Head of Marketing</div>
+                        </div>
+                      </div>
+                      <div class="reviews-slide__rating _icon-star">4.6</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slide reviews-slide swiper-slide">
+                  <picture
+                    ><source
+                      srcset="img/reviews/reviews_3.webp"
+                      type="image/webp" />
+                    <img
+                      class="reviews-slide__image"
+                      src="img/reviews/reviews_3.png"
+                      alt="reviews"
+                  /></picture>
+                  <div class="reviews-slide__content">
+                    <p class="reviews-slide__title">My house sold out fast!</p>
+                    <p class="reviews-slide__text">
+                      I was finally able to sell my house quickly through
+                      Hounter by immediately setting me up with people who
+                      wanted my house. I also do not get a discount from the
+                      sale of my house. Awesome!
+                    </p>
+                    <div class="reviews-slide__opinion">
+                      <div class="reviews-slide__autor autor">
+                        <picture
+                          ><source
+                            srcset="img/avatar/avatar_9.webp"
+                            type="image/webp" />
+                          <img
+                            class="autor__image"
+                            src="img/avatar/avatar_9.png"
+                            alt="avatar"
+                        /></picture>
+                        <div class="autor__info">
+                          <div class="autor__name">Courtney Henry</div>
+                          <div class="autor__address">CEO Andarafish</div>
+                        </div>
+                      </div>
+                      <div class="reviews-slide__rating _icon-star">4.3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="reviews-pagination"></div>
+          </div>
+        </section>
+        <section data-watch="navigator" class="artikel">
+          <div class="artikel__container">
+            <div class="artikel__head head">
+              <p class="head__subtitle">
+                See tips and trick from our partnership
+              </p>
+              <h2 class="head__title">
+                Find out more about <br />
+                selling and buying homes
+              </h2>
+            </div>
+            <a href="#" class="artikel__button">More Artikel</a>
+            <div class="artikel__content content-artikel">
+              <div class="content-artikel__left left-artikel">
+                <div class="left-artikel__item item-artikel">
+                  <picture
+                    ><source
+                      srcset="img/artikel/artikel_1.webp"
+                      type="image/webp" />
+                    <img
+                      class="item-artikel__image"
+                      src="img/artikel/artikel_1.png"
+                      alt="artikel"
+                  /></picture>
+                  <div class="item-artikel__body">
+                    <div class="item-artikel__autor autor-artikel">
+                      <picture
+                        ><source
+                          srcset="img/avatar/avatar_1.webp"
+                          type="image/webp" />
+                        <img
+                          class="autor-artikel__avatar"
+                          src="img/avatar/avatar_1.png"
+                          alt="avatar"
+                      /></picture>
+                      <div class="autor-artikel__name">Dianne Russell</div>
+                    </div>
+                    <div class="item-artikel__title">
+                      The things we need to check when we want to buy a house
+                    </div>
+                    <div class="item-artikel__timer _icon-time">
+                      4 min read | 25 Apr 2021
+                    </div>
+                  </div>
+                </div>
+                <div class="left-artikel__item item-artikel">
+                  <picture
+                    ><source
+                      srcset="img/artikel/artikel_2.webp"
+                      type="image/webp" />
+                    <img
+                      class="item-artikel__image"
+                      src="img/artikel/artikel_2.png"
+                      alt="artikel"
+                  /></picture>
+                  <div class="item-artikel__body">
+                    <div class="item-artikel__autor autor-artikel">
+                      <picture
+                        ><source
+                          srcset="img/avatar/avatar_6.webp"
+                          type="image/webp" />
+                        <img
+                          class="autor-artikel__avatar"
+                          src="img/avatar/avatar_6.png"
+                          alt="avatar"
+                      /></picture>
+                      <div class="autor-artikel__name">Courtney Henry</div>
+                    </div>
+                    <div class="item-artikel__title">
+                      7 Ways to distinguish the quality of the house we want to
+                      buy
+                    </div>
+                    <div class="item-artikel__timer _icon-time">
+                      6 min read | 24 Apr 2021
+                    </div>
+                  </div>
+                </div>
+                <div class="left-artikel__item item-artikel">
+                  <picture
+                    ><source
+                      srcset="img/artikel/artikel_3.webp"
+                      type="image/webp" />
+                    <img
+                      class="item-artikel__image"
+                      src="img/artikel/artikel_3.png"
+                      alt="artikel"
+                  /></picture>
+                  <div class="item-artikel__body">
+                    <div class="item-artikel__autor autor-artikel">
+                      <picture
+                        ><source
+                          srcset="img/avatar/avatar_7.webp"
+                          type="image/webp" />
+                        <img
+                          class="autor-artikel__avatar"
+                          src="img/avatar/avatar_7.png"
+                          alt="avatar"
+                      /></picture>
+                      <div class="autor-artikel__name">Darlene Robertson</div>
+                    </div>
+                    <div class="item-artikel__title">
+                      The best way to know the quality of the house we want to
+                      buy
+                    </div>
+                    <div class="item-artikel__timer _icon-time">
+                      2 min read | 24 Apr 2021
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-artikel__right right-artikel">
+                <picture
+                  ><source
+                    srcset="img/artikel/artikel_4.webp"
+                    type="image/webp" />
+                  <img
+                    src="img/artikel/artikel_4.png"
+                    class="right-artikel__image"
+                    alt="image"
+                /></picture>
+                <div class="right-artikel__autor autor-artikel">
+                  <picture
+                    ><source
+                      srcset="img/avatar/avatar_8.webp"
+                      type="image/webp" />
+                    <img
+                      class="autor-artikel__avatar"
+                      src="img/avatar/avatar_8.png"
+                      alt="avatar"
+                  /></picture>
+                  <div class="autor-artikel__name">Cameron Williamson</div>
+                </div>
+                <div class="right-artikel__title">
+                  12 Things to know before buying a house
+                </div>
+                <p class="right-artikel__text">
+                  Want to buy a house but are unsure about what we should know,
+                  here I will try to explain what we should know and check when
+                  we want to buy a house
+                </p>
+                <div class="right-artikel__timer _icon-time">
+                  8 min read | 25 Apr 2021
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="formEmail">
+          <div class="formEmail__container">
+            <div class="formEmail__body">
+              <h3 class="formEmail__title">
+                Subscribe For More Info and update from Hounter
+              </h3>
+              <form class="formEmail__form _icon-email" data-dev action="#">
+                <input
+                  autocomplete="on"
+                  id="formEmail"
+                  type="email"
+                  name="email"
+                  data-error="Ошибка"
+                  placeholder="Your email here"
+                  class="formEmail__input input"
+                />
+                <button type="submit" class="formEmail__button">
+                  Subsribe Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__about about-footer">
+            <div class="about-footer__logo logo">
+              <a href="#" class="logo__body">
+                <img src="img/logo.svg" alt="logo" />
+                <p class="logo__text">Hounter</p>
+              </a>
+            </div>
+            <div class="about-footer__text">
+              We provide information about properties such as houses, villas and
+              apartments to help people find their dream home
+            </div>
+            <div class="about-footer__social social-footer">
+              <a href="#" class="social-footer__facebook _icon-facebook"></a>
+              <a href="#" class="social-footer__twitter _icon-twitter"></a>
+              <a href="#" class="social-footer__instagram _icon-instagram"></a>
+            </div>
+          </div>
+          <div class="footer__columns column-footer">
+            <div
+              data-spollers="645,max"
+              class="column-footer__spollers spollers-footer"
+            >
+              <div class="spollers-footer__item">
+                <button
+                  type="button"
+                  data-spoller
+                  class="spollers-footer__title _icon-arrow"
+                >
+                  Property
+                </button>
+                <div class="spollers-footer__body">
+                  <div class="spollers-footer__content">
+                    <ul class="spollers-footer__elems">
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link">House</a>
+                      </li>
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link">Apartment</a>
+                      </li>
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link">Villa</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-spollers="645,max"
+              class="column-footer__spollers spollers-footer"
+            >
+              <div class="spollers-footer__item">
+                <button
+                  type="button"
+                  data-spoller
+                  class="spollers-footer__title _icon-arrow"
+                >
+                  Article
+                </button>
+                <div class="spollers-footer__body">
+                  <div class="spollers-footer__content">
+                    <ul class="spollers-footer__elems">
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link"
+                          >New Article</a
+                        >
+                      </li>
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link"
+                          >Popular Article</a
+                        >
+                      </li>
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link">Most Read</a>
+                      </li>
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link"
+                          >Tips & Tricks</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              data-spollers="645,max"
+              class="column-footer__spollers spollers-footer"
+            >
+              <div class="spollers-footer__item">
+                <button
+                  type="button"
+                  data-spoller
+                  class="spollers-footer__title _icon-arrow _spoller-active"
+                >
+                  Contact
+                </button>
+                <div class="spollers-footer__body">
+                  <div class="spollers-footer__content">
+                    <ul class="spollers-footer__elems">
+                      <li class="spollers-footer__elem">
+                        <a href="#" class="spollers-footer__link"
+                          >2464 Royal Ln. Mesa, New Jersey 45463</a
+                        >
+                      </li>
+                      <li class="spollers-footer__elem">
+                        <a href="tel:+76715550110" class="spollers-footer__link"
+                          >(671) 555-0110</a
+                        >
+                      </li>
+                      <li class="spollers-footer__elem">
+                        <a
+                          href="mailto:info@hounter.com"
+                          class="spollers-footer__link"
+                          >info@hounter.com</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="popup" aria-hidden="true" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__content">
+          <button data-close type="button" class="popup__close">×</button>
+          <div class="popup__title">Let’s tour and see our house!</div>
+          <div class="popup__body">
+            <div class="popup__slider popup-slider swiper">
+              <div class="popup-slider__wrapper swiper-wrapper">
+                <div class="popup-slider__slide swiper-slide">
+                  <picture
+                    ><source
+                      srcset="img/readySell/video.webp"
+                      type="image/webp" />
+                    <img
+                      class="video"
+                      src="img/readySell/video.png"
+                      alt="readySell"
+                  /></picture>
+                </div>
+                <div class="popup-slider__slide swiper-slide">
+                  <picture
+                    ><source
+                      srcset="img/readySell/readySell_2.webp"
+                      type="image/webp" />
+                    <img src="img/readySell/readySell_2.png" alt="readySell"
+                  /></picture>
+                </div>
+                <div class="popup-slider__slide swiper-slide">
+                  <picture
+                    ><source
+                      srcset="img/readySell/readySell-big_1.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/readySell/readySell-big_1.jpg"
+                      alt="readySell"
+                  /></picture>
+                </div>
+                <div class="popup-slider__slide swiper-slide">
+                  <picture
+                    ><source
+                      srcset="img/readySell/readySell-big_4.webp"
+                      type="image/webp" />
+                    <img
+                      src="img/readySell/readySell-big_4.webp"
+                      alt="readySell"
+                  /></picture>
+                </div>
 
-									<div class="autor__info autor__info autor__info_big">
-										<div class="autor__name autor__name_big">Dianne Russell</div>
-										<div class="autor__address autor__address_big">Manager Director</div>
-									</div>
-								</div>
-								<a href="tel:+79234489285" class="contacts-readySell__button _icon-phone">Contact Now </a>
-							</div>
-						</div>
-
-					</div>
-					<div class="readySell__image image-readySell ">
-						<div class="image-readySell__big " data-popup="#popup">
-							<picture><source srcset="img/readySell/readySell_1.webp" type="image/webp"><img src="img/readySell/readySell_1.png" alt="readySell"></picture>
-						</div>
-						<div class="image-readySell__bottom bottom-image">
-							<picture><source srcset="img/readySell/readySell_2.webp" type="image/webp"><img class="bottom-image__left" data-popup="#popup" src="img/readySell/readySell_2.png" alt="readySell"></picture>
-							<picture><source srcset="img/readySell/readySell_3.webp" type="image/webp"><img class="bottom-image__middle" data-popup="#popup" src="img/readySell/readySell_3.png" alt="readySell"></picture>
-							<picture><source srcset="img/readySell/readySell_4.webp" type="image/webp"><img class="bottom-image__right" data-popup="#popup" src="img/readySell/readySell_4.png" alt="readySell"></picture>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch="navigator" class="reviews">
-				<div class="reviews__container">
-					<div class="reviews__head head">
-						<p class="head__subtitle">See Our Review</p>
-						<h2 class="head__title">What Our User Say About Us</h2>
-					</div>
-					<div class="reviews__slider swiper">
-						<div class="reviews__wrapper swiper-wrapper">
-							<div class="reviews__slide reviews-slide swiper-slide">
-								<picture><source srcset="img/reviews/reviews_1.webp" type="image/webp"><img class="reviews-slide__image" src="img/reviews/reviews_1.png" alt="reviews"></picture>
-								<div class="reviews-slide__content">
-									<p class="reviews-slide__title">Best! I got the house I wanted through Hounter</p>
-									<p class="reviews-slide__text">Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.</p>
-									<div class="reviews-slide__opinion">
-										<div class="reviews-slide__autor autor">
-											<picture><source srcset="img/avatar/avatar_1.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_1.png" alt="avatar" /></picture>
-											<div class="autor__info">
-												<div class="autor__name">Dianne Russell</div>
-												<div class="autor__address">Manager Director</div>
-											</div>
-
-										</div>
-										<div class="reviews-slide__rating _icon-star">4.6</div>
-									</div>
-								</div>
-							</div>
-							<div class="reviews__slide reviews-slide swiper-slide">
-								<picture><source srcset="img/reviews/reviews_2.webp" type="image/webp"><img class="reviews-slide__image" src="img/reviews/reviews_2.png" alt="reviews"></picture>
-								<div class="reviews-slide__content">
-									<p class="reviews-slide__title">Through the Hounter, I can get a house for my self</p>
-									<p class="reviews-slide__text">By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!</p>
-									<div class="reviews-slide__opinion">
-										<div class="reviews-slide__autor autor">
-											<picture><source srcset="img/avatar/avatar_5.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_5.png" alt="avatar" /></picture>
-											<div class="autor__info">
-												<div class="autor__name">Esther Howard</div>
-												<div class="autor__address">Head of Marketing</div>
-											</div>
-
-										</div>
-										<div class="reviews-slide__rating _icon-star">4.6</div>
-									</div>
-
-								</div>
-
-
-							</div>
-							<div class="reviews__slide reviews-slide swiper-slide">
-								<picture><source srcset="img/reviews/reviews_3.webp" type="image/webp"><img class="reviews-slide__image" src="img/reviews/reviews_3.png" alt="reviews"></picture>
-								<div class="reviews-slide__content">
-									<p class="reviews-slide__title">My house sold out fast!</p>
-									<p class="reviews-slide__text">I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!</p>
-									<div class="reviews-slide__opinion">
-										<div class="reviews-slide__autor autor">
-											<picture><source srcset="img/avatar/avatar_9.webp" type="image/webp"><img class="autor__image" src="img/avatar/avatar_9.png" alt="avatar" /></picture>
-											<div class="autor__info">
-												<div class="autor__name">Courtney Henry</div>
-												<div class="autor__address">CEO Andarafish</div>
-											</div>
-
-										</div>
-										<div class="reviews-slide__rating _icon-star">4.3</div>
-									</div>
-
-								</div>
-
-
-							</div>
-						</div>
-
-					</div>
-					<div class="reviews-pagination"></div>
-				</div>
-			</section>
-			<section data-watch="navigator" class="artikel">
-				<div class="artikel__container">
-					<div class="artikel__head head">
-						<p class="head__subtitle">See tips and trick from our partnership</p>
-						<h2 class="head__title">Find out more about <br>
-							selling and buying homes</h2>
-					</div>
-					<a href="#" class="artikel__button">More Artikel</a>
-					<div class="artikel__content content-artikel">
-						<div class="content-artikel__left left-artikel">
-							<div class="left-artikel__item item-artikel">
-								<picture><source srcset="img/artikel/artikel_1.webp" type="image/webp"><img class="item-artikel__image" src="img/artikel/artikel_1.png" alt="artikel"></picture>
-								<div class="item-artikel__body">
-									<div class="item-artikel__autor autor-artikel">
-										<picture><source srcset="img/avatar/avatar_1.webp" type="image/webp"><img class="autor-artikel__avatar" src="img/avatar/avatar_1.png" alt="avatar"></picture>
-										<div class="autor-artikel__name">Dianne Russell</div>
-									</div>
-									<div class="item-artikel__title">The things we need to check when we want to buy a house</div>
-									<div class="item-artikel__timer _icon-time">4 min read | 25 Apr 2021</div>
-								</div>
-
-							</div>
-							<div class="left-artikel__item item-artikel">
-								<picture><source srcset="img/artikel/artikel_2.webp" type="image/webp"><img class="item-artikel__image" src="img/artikel/artikel_2.png" alt="artikel"></picture>
-								<div class="item-artikel__body">
-									<div class="item-artikel__autor autor-artikel">
-										<picture><source srcset="img/avatar/avatar_6.webp" type="image/webp"><img class="autor-artikel__avatar" src="img/avatar/avatar_6.png" alt="avatar"></picture>
-										<div class="autor-artikel__name">Courtney Henry</div>
-									</div>
-									<div class="item-artikel__title">7 Ways to distinguish the quality of the house we want to buy</div>
-									<div class="item-artikel__timer _icon-time">6 min read | 24 Apr 2021</div>
-								</div>
-
-							</div>
-							<div class="left-artikel__item item-artikel">
-								<picture><source srcset="img/artikel/artikel_3.webp" type="image/webp"><img class="item-artikel__image" src="img/artikel/artikel_3.png" alt="artikel"></picture>
-								<div class="item-artikel__body">
-									<div class="item-artikel__autor autor-artikel">
-										<picture><source srcset="img/avatar/avatar_7.webp" type="image/webp"><img class="autor-artikel__avatar" src="img/avatar/avatar_7.png" alt="avatar"></picture>
-										<div class="autor-artikel__name">Darlene Robertson</div>
-									</div>
-									<div class="item-artikel__title">The best way to know the quality of the house we want to buy</div>
-									<div class="item-artikel__timer _icon-time">2 min read | 24 Apr 2021</div>
-								</div>
-
-							</div>
-						</div>
-						<div class="content-artikel__right right-artikel">
-							<picture><source srcset="img/artikel/artikel_4.webp" type="image/webp"><img src="img/artikel/artikel_4.png" class="right-artikel__image" alt="image"></picture>
-							<div class="right-artikel__autor autor-artikel">
-								<picture><source srcset="img/avatar/avatar_8.webp" type="image/webp"><img class="autor-artikel__avatar" src="img/avatar/avatar_8.png" alt="avatar"></picture>
-								<div class="autor-artikel__name">Cameron Williamson</div>
-							</div>
-							<div class="right-artikel__title">12 Things to know before buying a house</div>
-							<p class="right-artikel__text">Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house</p>
-							<div class="right-artikel__timer _icon-time">8 min read | 25 Apr 2021</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="formEmail">
-				<div class="formEmail__container">
-					<div class="formEmail__body">
-						<h3 class="formEmail__title">
-							Subscribe For More Info and update from Hounter
-						</h3>
-						<form class="formEmail__form _icon-email" data-dev action="#">
-							<input autocomplete="on" id="formEmail" type="email" name="email" data-error="Ошибка" placeholder="Your email here" class="formEmail__input input" />
-							<button type="submit" class="formEmail__button">Subsribe Now</button>
-						</form>
-					</div>
-				</div>
-			</section>
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__about about-footer">
-					<div class="about-footer__logo logo">
-						<a href="#" class="logo__body">
-							<img src="img/logo.svg" alt="logo" />
-							<p class="logo__text">Hounter</p>
-						</a>
-					</div>
-					<div class="about-footer__text">
-						We provide information about properties such as houses, villas and
-						apartments to help people find their dream home
-					</div>
-					<div class="about-footer__social social-footer">
-						<a href="#" class="social-footer__facebook _icon-facebook"></a>
-						<a href="#" class="social-footer__twitter _icon-twitter"></a>
-						<a href="#" class="social-footer__instagram _icon-instagram"></a>
-					</div>
-				</div>
-				<div class="footer__columns column-footer">
-					<div data-spollers="645,max" class="column-footer__spollers spollers-footer">
-						<div class="spollers-footer__item">
-							<button type="button" data-spoller class="spollers-footer__title _icon-arrow">
-								Property
-							</button>
-							<div class="spollers-footer__body">
-								<div class="spollers-footer__content">
-									<ul class="spollers-footer__elems">
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">House</a>
-										</li>
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">Apartment</a>
-										</li>
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">Villa</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div data-spollers="645,max" class="column-footer__spollers spollers-footer">
-						<div class="spollers-footer__item">
-							<button type="button" data-spoller class="spollers-footer__title _icon-arrow">
-								Article
-							</button>
-							<div class="spollers-footer__body">
-								<div class="spollers-footer__content">
-									<ul class="spollers-footer__elems">
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">New Article</a>
-										</li>
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">Popular Article</a>
-										</li>
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">Most Read</a>
-										</li>
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">Tips & Tricks</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div data-spollers="645,max" class="column-footer__spollers spollers-footer">
-						<div class="spollers-footer__item">
-							<button type="button" data-spoller class="spollers-footer__title _icon-arrow _spoller-active">
-								Contact
-							</button>
-							<div class="spollers-footer__body">
-								<div class="spollers-footer__content">
-									<ul class="spollers-footer__elems">
-										<li class="spollers-footer__elem">
-											<a href="#" class="spollers-footer__link">2464 Royal Ln. Mesa, New Jersey 45463</a>
-										</li>
-										<li class="spollers-footer__elem">
-											<a href="tel:+76715550110" class="spollers-footer__link">(671) 555-0110</a>
-										</li>
-										<li class="spollers-footer__elem">
-											<a href="mailto:info@hounter.com" class="spollers-footer__link">info@hounter.com</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-
-	</div>
-	<div id="popup" aria-hidden="true" class="popup">
-		<div class="popup__wrapper">
-			<div class="popup__content">
-				<button data-close type="button" class="popup__close">×</button>
-				<div class="popup__title">Let’s tour and see our house!</div>
-				<div class="popup__body">
-					<div class="popup__slider popup-slider swiper">
-						<div class="popup-slider__wrapper swiper-wrapper">
-							<div class="popup-slider__slide swiper-slide">
-								<picture><source srcset="img/readySell/video.webp" type="image/webp"><img class="video" src="img/readySell/video.png" alt="readySell" /></picture>
-							</div>
-							<div class="popup-slider__slide swiper-slide">
-								<picture><source srcset="img/readySell/readySell_2.webp" type="image/webp"><img src="img/readySell/readySell_2.png" alt="readySell" /></picture>
-							</div>
-							<div class="popup-slider__slide swiper-slide">
-								<picture><source srcset="img/readySell/readySell-big_1.webp" type="image/webp"><img src="img/readySell/readySell-big_1.jpg" alt="readySell" /></picture>
-							</div>
-							<div class="popup-slider__slide swiper-slide">
-								<picture><source srcset="img/readySell/readySell-big_4.webp" type="image/webp"><img src="img/readySell/readySell-big_4.webp" alt="readySell" /></picture>
-							</div>
-
-							<button type="button" class="popup-swiper__button-prev _icon-arrow"></button>
-							<button type="button" class="popup-swiper__button-next _icon-arrow"></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="js/app.min.js?_v=20241014094100"></script>
-
-</body>
-
+                <button
+                  type="button"
+                  class="popup-swiper__button-prev _icon-arrow"
+                ></button>
+                <button
+                  type="button"
+                  class="popup-swiper__button-next _icon-arrow"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.min.js?_v=20241014094100"></script>
+  </body>
 </html>
